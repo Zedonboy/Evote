@@ -1,0 +1,23 @@
+{
+  "name": "addon",
+  "version": "1.0.0",
+  "description": "A Library to get the bounding box of a face",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild:dev": "node-gyp -j 16 rebuild --debug",
+    "build:dev": "node-gyp -j 16 build --debug",
+    "clean": "node-gyp clean",
+    "build": "node-gyp -j 16 build",
+    "rebuild": "node-gyp -j 16 rebuild",
+    "configure":"node-gyp configure"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-gyp": "^4.0.0"
+  },
+  "dependencies": {
+    "node-addon-api": "^1.6.3"
+  }
+}

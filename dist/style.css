@@ -1,0 +1,344 @@
+/* ========================================================================
+   Component: Notification
+ ========================================================================== */
+/*
+ * 1. Set position
+ * 2. Dimensions
+ */
+.uk-notification {
+  /* 1 */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1040;
+  /* 2 */
+  box-sizing: border-box;
+  width: 350px; }
+
+/* Position modifiers
+========================================================================== */
+.uk-notification-top-right,
+.uk-notification-bottom-right {
+  left: auto;
+  right: 10px; }
+
+.uk-notification-top-center,
+.uk-notification-bottom-center {
+  left: 50%;
+  margin-left: -175px; }
+
+.uk-notification-bottom-left,
+.uk-notification-bottom-right,
+.uk-notification-bottom-center {
+  top: auto;
+  bottom: 10px; }
+
+/* Responsiveness
+========================================================================== */
+/* Phones portrait and smaller */
+@media (max-width: 639px) {
+  .uk-notification {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    margin: 0; } }
+
+/* Message
+========================================================================== */
+.uk-notification-message {
+  position: relative;
+  padding: 15px;
+  background: #f8f8f8;
+  color: #666;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  cursor: pointer; }
+
+* + .uk-notification-message {
+  margin-top: 10px; }
+
+/* Close
+ * Adopts `uk-close`
+ ========================================================================== */
+.uk-notification-close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 15px; }
+
+.uk-notification-message:hover .uk-notification-close {
+  display: block; }
+
+/* Style modifiers
+ ========================================================================== */
+/*
+ * Primary
+ */
+.uk-notification-message-primary {
+  color: #1e87f0; }
+
+/*
+ * Success
+ */
+.uk-notification-message-success {
+  color: #32d296; }
+
+/*
+ * Warning
+ */
+.uk-notification-message-warning {
+  color: #faa05a; }
+
+/*
+ * Danger
+ */
+.uk-notification-message-danger {
+  color: #f0506e; }
+
+
+.elevate-1 {
+  z-index: 1;
+}
+.ev-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0
+}
+to { width: 100%
+}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent
+}
+50% { border-color: orange;
+}
+}
+
+
+.photo-heading {
+  grid-area: 1/1/2 / span 2;
+}
+#video {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+#canvas {
+  display: none;
+}
+.camera {
+  width: 340px;
+  grid-area: 2/1/3/2;
+  place-self: center;
+}
+.output {
+  width: 340px;
+  grid-area: 2/2/3/2;
+  place-self: center;
+}
+#startbutton {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 32px;
+  background-color: rgba(0, 150, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  color: rgba(255, 255, 255, 1);
+}
+.contentarea {
+  height: -webkit-fill-available;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10% 80% 10%;
+}
+
+
+.profile-photo {
+    max-width: 50%;
+    max-height: 100%;
+    border-radius: 50%
+}
+
+
+.inec {
+  width: 200px;
+  height: 200px;
+}
+.coat {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+
+.scanning-icon {
+  max-width: 200px;
+  max-height: 200px;
+}
+.scanning-animation {
+  animation: blinking 1.5s ease-in-out infinite ;
+}
+.card-image video {
+  width: 100%;
+  max-height: 80%;
+  max-width: 100%;
+  overflow: hidden;
+}
+@keyframes blinking {
+from {
+    opacity: 0.3;
+}
+to {
+    opacity: 0.3;
+}
+20% {
+    opacity: 0.6;
+}
+50%{
+    opacity: 0.9;
+}
+80% {
+    opacity: 0.6;
+}
+}
+
+
+.small-text {
+    font-size: 8px;
+}
+#barcode {
+  max-width: 270px;
+}
+.printed-profile {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.success-panel {
+  padding: 30px;
+  max-width: 300px;
+  max-height: 500px;
+}
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.particle-screen {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.take-screen {
+  width: 100%;
+  background-color: #222831;
+  height: -webkit-fill-available;
+}
+
+
+.scanning-icon {
+  max-width: 100px;
+  max-height: 100px;
+}
+.scanning-animation {
+  animation: blinking 1.5s ease-in-out infinite;
+}
+.card-image video {
+  width: 100%;
+  max-height: 80%;
+  max-width: 100%;
+  overflow: hidden;
+}
+@keyframes blinking {
+from {
+    opacity: 0.3;
+}
+to {
+    opacity: 0.3;
+}
+20% {
+    opacity: 0.6;
+}
+50% {
+    opacity: 0.9;
+}
+80% {
+    opacity: 0.6;
+}
+}
+
+
+.scanning-icon {
+  max-width: 100px;
+  max-height: 100px;
+}
+.scanning-animation {
+  animation: blinking 1.5s ease-in-out infinite;
+}
+.card-image video {
+  width: 100%;
+  max-height: 80%;
+  max-width: 100%;
+  overflow: hidden;
+}
+@keyframes blinking {
+from {
+    opacity: 0.3;
+}
+to {
+    opacity: 0.3;
+}
+20% {
+    opacity: 0.6;
+}
+50% {
+    opacity: 0.9;
+}
+80% {
+    opacity: 0.6;
+}
+}
+
+
+.searchBoxContainer {
+  height: 200px;
+}
+
+
+.searchBoxContainer {
+  height: 200px;
+}
+
